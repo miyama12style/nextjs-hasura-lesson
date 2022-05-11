@@ -1,8 +1,10 @@
 import { ReactNode, VFC } from 'react'
 import Link from 'next/link'
+import Head from 'next/head'
 
 type Props = {
   children: ReactNode
+  title: string
 }
 
 const LinkData = [
@@ -43,7 +45,7 @@ const LinkData = [
 export const Layout: VFC<Props> = (props) => {
   return (
     <div className="flex flex-col justify-center items-center min-h-screen text-gray-600 text-sm font-mono">
-      {/* <head>title</head> */}
+      <Head>{props.title}</Head>
       <header>
         <nav className="bg-gray-800 w-screen">
           <div className="flex items-center pl-8 h-14">
