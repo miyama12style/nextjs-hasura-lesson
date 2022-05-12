@@ -11,12 +11,12 @@ export const LocalStateB: VFC = () => {
 
   return (
     <>
-      {todos?.map((title, index) => (
+      {todos?.map((task, index) => (
         <p key={index} className="mb-3">
-          {title}
+          {task.title}
         </p>
       ))}
-      <Link href="local-state-a">
+      <Link href="/local-state-a">
         <a>BACK</a>
       </Link>
     </>
