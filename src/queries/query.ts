@@ -15,15 +15,15 @@ export const GET_USERS = gql`
 // クライアントのキャッシュからとる
 // これが実行された時、GraphQLのクライアントサイドにあるキャッシュをみにいく
 // →さまざまなコンポーネントに保存されているデータに自由にアクセスできる
-// export const GET_USERS_LOCAL = gql`
-//   query GetUsers {
-//     users(order_by: { created_at: desc }) @client {
-//       id
-//       name
-//       created_at
-//     }
-//   }
-// `
+export const GET_USERS_LOCAL = gql`
+  query GetUsers {
+    users(order_by: { created_at: desc }) @client {
+      id
+      name
+      created_at
+    }
+  }
+`
 
 // getstaticpathsで使う
 export const GET_USERIDS = gql`
