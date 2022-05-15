@@ -15,7 +15,7 @@ type Props = {
   delete_users_by_pk: DeleteUserMutationFn
 }
 
-export const UserItem: VFC<Props> = memo((props) => {
+export const UserItem: VFC<Props> = memo(function userItem(props) {
   console.log('rendering')
 
   return (
