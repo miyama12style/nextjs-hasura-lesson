@@ -1,3 +1,5 @@
+// キャッシュにアクセスして、サーバーにはアクセスしないデータフェッチ
+
 import { useQuery } from '@apollo/client'
 import { NextPage } from 'next'
 import Link from 'next/link'
