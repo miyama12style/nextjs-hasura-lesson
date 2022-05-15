@@ -38,8 +38,6 @@ const FetchMain = () => {
     )
   }
 
-  console.log(data.users)
-
   return (
     <>
       <Layout title="Hasura fetchPolicy">
