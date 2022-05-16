@@ -28,7 +28,7 @@ export const GET_USERS_LOCAL = gql`
 // getstaticpathsで使う
 export const GET_USERIDS = gql`
   query GetUserIds {
-    users(order_by: { created_at: desc }) @client {
+    users(order_by: { created_at: desc }) {
       id
     }
   }
