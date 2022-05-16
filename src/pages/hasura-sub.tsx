@@ -43,7 +43,7 @@ const FetchSub: NextPage = () => {
         </p>
       ))}
       <Link href="/hasura-main">
-        <a className="mt-6">Next</a>
+        <a className="mt-6">Back</a>
       </Link>
     </Layout>
   )
