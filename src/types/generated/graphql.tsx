@@ -1187,7 +1187,7 @@ export type GetUserIdsQueryVariables = Exact<{ [key: string]: never }>
 
 export type GetUserIdsQuery = {
   __typename?: 'query_root'
-  users: Array<{ __typename?: 'users'; id: any }>
+  users: Array<{ __typename?: 'users'; id: string }>
 }
 
 export type GetUserByIdQueryVariables = Exact<{
