@@ -24,7 +24,9 @@ const HasuraCrud: NextPage = () => {
   // ユーザーの編集用にstateを作成する
   const [editedUser, setEditedUser] = useState({ id: '', name: '' })
 
-  const { data, loading, error } = useQuery<GetUsersQuery>(GET_USERS)
+  const { data, loading, error } = useQuery<GetUsersQuery>(GET_USERS, {
+    fetchPolicy: 'cache-and-network',
+  })
   const [update_users_by_pk] = useMutation<UpdateUserMutation>(UPDATE_USER)
   const [insert_users_one] = useMutation<CreateUserMutation>(CREATE_USER, {
     // {}のなかはデータのフィールド名
