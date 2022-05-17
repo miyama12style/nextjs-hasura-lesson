@@ -67,7 +67,7 @@ const HasuraCrud: NextPage = () => {
             name: editedUser.name,
           },
         })
-      } catch (error: any) {
+      } catch {
         alert(error.message)
       }
       // ユーザーの新規作成
