@@ -13,7 +13,7 @@ export const getStaticProps: GetStaticProps = async () => {
 
   return {
     props: { users: data.users },
-    revalidate: 1,
+    revalidate: 30,
   }
 }
 
