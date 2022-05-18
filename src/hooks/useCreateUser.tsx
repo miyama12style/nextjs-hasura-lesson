@@ -39,7 +39,7 @@ export const useCreateUser = () => {
     []
   )
 
-  const printMsg = useCallback(() => console.log('hello'), [])
+  const printHelloMsg = useCallback(() => console.log('hello'), [])
 
   const handleSubmit: ComponentProps<'form'>['onSubmit'] = useCallback(
     async (e) => {
@@ -60,7 +60,7 @@ export const useCreateUser = () => {
     text,
     username,
     handleSubmit,
-    printMsg,
+    printHelloMsg,
     handleTextChange,
     handleUsernameChange,
   }
