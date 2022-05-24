@@ -40,8 +40,6 @@ const LinkData = [
   },
 ]
 
-// flex-1の意味　tailwind聞いてない
-
 export const Layout: VFC<Props> = (props) => {
   return (
     <div className="flex flex-col justify-center items-center min-h-screen text-gray-600 text-sm font-mono">
