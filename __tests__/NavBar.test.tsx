@@ -47,7 +47,7 @@ describe('Navigation Test Cases', () => {
       // 確実に遷移したことを確認するため、indexページのpタグ内の文字を取得するまでまつ
       expect(await screen.findByText('Next.js + GraphQL')).toBeInTheDocument()
       userEvent.click(screen.getByTestId('makeVar-nav'))
-      expect(await screen.findByText('makeVar')).toBeInTheDocument()
+      expect(screen.getByText('makeVar')).toBeInTheDocument()
     } catch (error) {
       alert(error)
     }
