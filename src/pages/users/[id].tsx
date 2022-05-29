@@ -70,7 +70,7 @@ const UserDetail: NextPage<Props> = (props) => {
       <p className="text-xl font-bold">User Detail</p>
       <p className="m-4">
         {`ID :`}
-        {props.user.name}
+        {props.user.id}
       </p>
       <p className="mb-4 text-xl font-bold">{props.user.name}</p>
       <p className="mb-12">{props.user.created_at}</p>
