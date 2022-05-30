@@ -62,7 +62,7 @@ type Props = {
 
 const UserDetail: NextPage<Props> = (props) => {
   if (!props.user) {
-    return <Layout title="User Detail LoadingPage">Loading...</Layout>
+    return <Layout title="loading">Loading...</Layout>
   }
 
   return (
