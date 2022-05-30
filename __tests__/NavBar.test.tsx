@@ -9,7 +9,6 @@ import { setupServer } from 'msw/node'
 import '@testing-library/jest-dom/extend-expect'
 import { render, screen, cleanup } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
-import 'setimmediate'
 
 //next-page-testerを使う場合は、最初に初期化する必要がある
 initTestHelpers()
