@@ -1,7 +1,6 @@
 import { useCallback, VFC } from 'react'
 import { useCreateUser } from 'src/hooks/useCreateUser'
 import { CreateUserChild } from './CreateUserChild'
-import { CreateUserChildChild } from 'src/components/CreateUserChildChild'
 
 export const CreateUser: VFC = () => {
   const {
@@ -15,7 +14,6 @@ export const CreateUser: VFC = () => {
 
   console.log('CreateUser render')
 
-  const printHelloHelloMsg = useCallback(() => console.log('hello hello'), [])
 
   return (
     <>
@@ -51,9 +49,6 @@ export const CreateUser: VFC = () => {
       </form>
       <CreateUserChild
         printHelloMsg={printHelloMsg}
-        CreateUserChildChildComponent={
-          <CreateUserChildChild printHelloHelloMsg={printHelloHelloMsg} />
-        }
         handleSubmit={handleSubmit}
       />
     </>
