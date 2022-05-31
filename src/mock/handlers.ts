@@ -58,7 +58,7 @@ export const handlers = [
   }),
 
   // このqueryは引数としてIDを受け取って、一致するものを返す
-  graphql.query('GetUserByID', (req, res, ctx) => {
+  graphql.query('GetUserById', (req, res, ctx) => {
     // 渡されたIDを格納する
     const { id } = req.variables
 
