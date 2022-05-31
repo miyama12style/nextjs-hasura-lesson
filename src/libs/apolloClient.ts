@@ -17,11 +17,19 @@ const createApolloClient = () => {
   return new ApolloClient({
     ssrMode: typeof window === 'undefined',
     link: new HttpLink({
-      uri: 'https://trusted-piglet-28.hasura.app/v1/graphql'
-      ,
+      uri: 'https://trusted-piglet-28.hasura.app/v1/graphql',
       fetch, // Server URL (must be absolute)
     }),
-    cache: new InMemoryCache(),
+    cache: new InMemoryCache({
+      typePolicies: {
+        query_root: {
+          queryType: true,
+        },
+        mutation_root: {
+          mutationType: true,
+        },
+      },
+    }),
   })
 }
 
