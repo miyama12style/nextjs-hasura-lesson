@@ -12,6 +12,9 @@ import '@testing-library/jest-dom/extend-expect'
 import { render, screen, cleanup } from '@testing-library/react'
 import 'setimmediate'
 
+process.env.NEXT_PUBLIC_HASURA_URL="https://basic-hsura-lesson.hasura.app/v1/graphql"
+
+
 //next-page-testerを使う場合は、最初に初期化する必要がある
 initTestHelpers()
 

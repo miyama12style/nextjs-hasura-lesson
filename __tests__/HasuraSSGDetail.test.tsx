@@ -9,6 +9,9 @@ import { handlers } from 'src/mock/handlers'
 import '@testing-library/jest-dom/extend-expect'
 import userEvent from '@testing-library/user-event'
 
+process.env.NEXT_PUBLIC_HASURA_URL="https://basic-hsura-lesson.hasura.app/v1/graphql"
+
+
 initTestHelpers()
 
 const server = setupServer(...handlers)
