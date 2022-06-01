@@ -9,8 +9,6 @@ import {
   NormalizedCacheObject,
 } from '@apollo/client'
 
-export const APOLLO_STATE_PROP_NAME = '__APOLLO_STATE__'
-
 let apolloClient: ApolloClient<NormalizedCacheObject> | undefined
 
 const createApolloClient = () => {
@@ -18,6 +16,9 @@ const createApolloClient = () => {
     ssrMode: typeof window === 'undefined',
     link: new HttpLink({
       uri: 'https://basic-hsura-lesson.hasura.app/v1/graphql',
+      headers: {
+        'x-hasura-admin-secret': process.env.NEXT_PUBLIC_HASURA_KEY,
+      },
       fetch, // Server URL (must be absolute)
     }),
     cache: new InMemoryCache({
