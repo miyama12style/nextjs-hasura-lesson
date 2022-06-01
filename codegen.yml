@@ -1,5 +1,5 @@
 overwrite: true
-schema: "https://trusted-piglet-28.hasura.app/v1/graphql"
+schema: "https://basic-hsura-lesson.hasura.app/v1/graphql"
 documents: "queries/**/*.ts"
 generates:
   types/generated/graphql.tsx:
