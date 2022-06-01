@@ -7,6 +7,7 @@ import { setupServer } from 'msw/node'
 import { getPage, initTestHelpers } from 'next-page-tester'
 import { handlers } from 'src/mock/handlers'
 import '@testing-library/jest-dom/extend-expect'
+import userEvent from '@testing-library/user-event'
 
 initTestHelpers()
 
@@ -34,5 +35,16 @@ describe('hasuraSSGのdetailページのテスト', () => {
     })
     render(page)
     expect(await screen.findByText('User Detail')).toBeInTheDocument()
+    expect(screen.getByText('Test user A')).toBeInTheDocument()
+    expect(
+      screen.getByText('2022-05-06T10:41:04.365422+00:00')
+    ).toBeInTheDocument()
+    userEvent.click(screen.getByTestId('back-to-main'))
+    expect(await screen.findByText('SSG + ISR')).toBeInTheDocument()
+    userEvent.click(
+      screen.getByTestId('link-fcd77df9-cb0e-7876-eb4a-782e01ff16cb')
+    )
+    expect(await screen.findByText('User Detail')).toBeInTheDocument()
+    expect(screen.getByText('Test user B')).toBeInTheDocument()
   })
 })
